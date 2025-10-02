@@ -47,13 +47,13 @@
      
 ## Запуск
 ```bash
-python main.py```
+python main.py
 
 ## Тестирование
 Проект использует pytest 8.4.2
 Запуск тестов:
 ```bash
-pytest -v```
+pytest -v
 
 ## Технологии
 - Python 3.13.1

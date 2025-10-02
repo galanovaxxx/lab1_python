@@ -1,4 +1,4 @@
-import pow
+import src.pow
 
 
 def mul_function(s):
@@ -54,4 +54,4 @@ def mul_function(s):
                         return mul_function(s[:x]) % mul_function(s[x + 1:])
                     else:
                         raise ValueError("Ошибка при делении")
-    return pow.pow_function(s)
+    return src.pow.pow_function(s)

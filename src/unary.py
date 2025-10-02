@@ -1,15 +1,18 @@
-import primary
+import src.primary
+import src.expr
 
 
-def unary_function(s):
+def unary(s):
     """Функция работает с унарными знаками. Если '+', удаляет его, если '-', удаляет его
-    и умножает следущее за ним число на (-1)."""
+    и умножает следующее за ним число на (-1)."""
+    print(s)
     if s:
-        if s[0] == '+' and (type(s[1]) == int or type(s[1]) == float):
+        if s[0] == '+':
             s.pop(0)
+            return src.expr.expr_function(s)
         if s[0] == '-':
             s.pop(0)
-            s[0] = s[0] * (-1)
+            return -(src.expr.expr_function(s))
         if s:
             x = 0
             while x > len(s):
@@ -20,5 +23,5 @@ def unary_function(s):
                         s.pop(x + 1)
                         s[x + 1] = s[x + 1] * (-1)
                     x += 1
-    return primary.primary_function(s)
-
+    print(s)
+    return src.primary.primary_function(s)

@@ -2,7 +2,7 @@
 name = "lab1_python"
 version = "0.1.0"
 description = "lab1 M1"
-requires-python = ">=3.13.1"
+requires-python = ">=3.12"
 dependencies = [
     "pytest>=8.4.2",
 ]

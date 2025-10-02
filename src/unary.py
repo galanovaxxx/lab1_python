@@ -1,4 +1,4 @@
-from src.primary import primary_function
+import primary
 
 
 def unary_function(s):
@@ -20,4 +20,5 @@ def unary_function(s):
                         s.pop(x + 1)
                         s[x + 1] = s[x + 1] * (-1)
                     x += 1
-    return primary_function(s)
+    return primary.primary_function(s)
+

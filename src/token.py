@@ -1,4 +1,4 @@
-def token_function(s):
+def token_function(s: str) -> list:
     """Функция для токенизации. Составляет список из чисел и знаков и
     переводит числа в int или float."""
     s = s.replace(' ', '')

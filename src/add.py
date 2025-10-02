@@ -1,4 +1,4 @@
-from src.mul import mul_function
+import mul
 
 
 def add_function(s):
@@ -15,7 +15,7 @@ def add_function(s):
             if s[x] == '+':
                 if balance == 0:
                     return add_function(s[:x]) + add_function(s[x + 1:])
-
+                    
     if '-' in s[1:]:
         for x in range(len(s)):
             if s[x] == '(':
@@ -25,4 +25,4 @@ def add_function(s):
             if s[x] == '-':
                 if balance == 0:
                     return add_function(s[:x]) - add_function(s[x + 1:])
-    return mul_function(s)
+    return mul.mul_function(s)

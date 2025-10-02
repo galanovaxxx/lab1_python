@@ -1,4 +1,4 @@
-import expr
+import src.expr
 
 
 def primary_function(s):
@@ -6,6 +6,6 @@ def primary_function(s):
     иначе выводит ответ"""
     if s:
         if '(' in s:
-            return expr.expr_function(s)
+            return src.expr.expr_function(s)
         return s[0]
 

@@ -1,4 +1,4 @@
-from src.add import add_function
+import add
 
 
 def expr_function(s):
@@ -17,4 +17,5 @@ def expr_function(s):
                     flag = 0
         if flag == 1:
             s = s[1:-1]
-    return add_function(s)
+    return add.add_function(s)
+

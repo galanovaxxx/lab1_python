@@ -1,7 +1,7 @@
 from re import *
 
 
-def check_function(s):
+def check_function(s: str) -> bool:
     """Функция проверки корректности выражения."""
     if '0' not in s and '1' not in s and '2' not in s and '3' not in s and '4' not in s and '5' not in s and '6' not in s and '7' not in s and '8' not in s and '9' not in s:
         raise ValueError("Некорректно введено выражение")

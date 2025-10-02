@@ -1,4 +1,4 @@
-import mul
+import src.mul
 
 
 def add_function(s):
@@ -12,17 +12,17 @@ def add_function(s):
                 balance += 1
             if s[x] == ')':
                 balance -= 1
-            if s[x] == '+':
+            if s[x] == '+' and x != 0:
                 if balance == 0:
                     return add_function(s[:x]) + add_function(s[x + 1:])
-                    
+
     if '-' in s[1:]:
         for x in range(len(s)):
             if s[x] == '(':
                 balance += 1
             if s[x] == ')':
                 balance -= 1
-            if s[x] == '-':
+            if s[x] == '-' and x != 0:
                 if balance == 0:
                     return add_function(s[:x]) - add_function(s[x + 1:])
-    return mul.mul_function(s)
+    return src.mul.mul_function(s)

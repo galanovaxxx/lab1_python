@@ -1,12 +1,12 @@
-import check
-import token
-import expr
+import src.check
+import src.token
+import src.expr
 
 
 def final_function(s):
-    if check.check_function(s):
-        s = token.token_function(s)
-        k = expr.expr_function(s)
+    if src.check.check_function(s):
+        s = src.token.token_function(s)
+        k = src.expr.expr_function(s)
         if '.' in str(k):
             if int(k) == k:
                 return int(k)

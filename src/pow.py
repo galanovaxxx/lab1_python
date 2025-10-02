@@ -1,4 +1,4 @@
-import unary
+import src.unary
 
 
 def pow_function(s):
@@ -15,4 +15,4 @@ def pow_function(s):
                 if balance == 0:
                     return pow_function(s[:x]) ** pow_function(s[x + 1:])
 
-    return unary.unary_function(s)
+    return src.unary.unary_function(s)

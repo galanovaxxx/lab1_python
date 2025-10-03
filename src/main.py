@@ -6,5 +6,6 @@ def main() -> None:
 
     print(src.final.final_function(s))
 
+
 if __name__ == "__main__":
     main()

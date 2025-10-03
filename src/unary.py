@@ -2,7 +2,7 @@ import src.primary
 import src.expr
 
 
-def unary_function(s: list) -> int, float:
+def unary_function(s: list) -> [int, float]:
     """Функция работает с унарными знаками. Если '+', удаляет его, если '-', удаляет его
     и умножает следующее за ним число на (-1)."""
     print(s)

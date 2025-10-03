@@ -1,7 +1,7 @@
 import src.add
 
 
-def expr_function(s: list) -> int, float:
+def expr_function(s: list) -> [int, float]:
     """Функция убирает скобки, окаймляющие список, если скобки есть
     и список не пустой. Потом вызывает функцию add."""
     balance = 0

@@ -3,21 +3,21 @@ from re import *
 
 def check_function(s: str) -> bool:
     """Функция проверки корректности выражения."""
-    if '0' not in s and '1' not in s and '2' not in s and '3' not in s and '4' not in s and '5' not in s and '6' not in s and '7' not in s and '8' not in s and '9' not in s:
+    if '0' not in s and '1' not in s and '2' not in s and '3' not in s and '4' not in s and '5' not in s and '6' not in s and '7' not in s and '8' not in s and '9' not in s:  # есть ли числа в строке
         raise ValueError("Некорректно введено выражение")
-    if '  ' in s:
+    if '  ' in s:  # не может быть больше 1 пробела
         raise ValueError("Некорректно введено выражение")
     pattern = r'[0-9.][ ][0-9.]'
     z = findall(pattern, s)
-    if len(z) > 0:
+    if len(z) > 0:  # не может быть пробела между цифрами
         raise ValueError("Некорректно введено выражение")
-    while ' ' in s:
+    while ' ' in s:  # убираем пробелы
         s = s.replace(' ', '')
-    i = 0
-    state = 0
-    balance = 0
-    while i < len(s):
-        if s[-1] not in '1234567890)':
+    i = 0  # индекс строки
+    state = 0  # состояние (какой был символ до)
+    balance = 0  # подсчет скобок
+    while i < len(s):  # проверка порядка символов
+        if s[-1] not in '1234567890)':  # проверка последнего символа отдельно
             raise ValueError("Некорректно введено выражение")
         if s[i] in '1234567890':
             if state != 5:
@@ -78,7 +78,7 @@ def check_function(s: str) -> bool:
             pass
         else:
             raise ValueError("Некорректно введено выражение")
-    if balance == 0:
+    if balance == 0:  # все скобки закрыты
         pass
     else:
         raise ValueError("Некорректно введено выражение9")

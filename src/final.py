@@ -4,11 +4,12 @@ import src.expr
 
 
 def final_function(s: list) -> [int, float]:
-    if src.check.check_function(s):
-        s = src.token.token_function(s)
-        k = src.expr.expr_function(s)
-        if '.' in str(k):
-            if int(k) == k:
+    """Функция объединяет все предыдущие функции"""
+    if src.check.check_function(s): # если выражение введено корректно
+        s = src.token.token_function(s) # токенизируем
+        k = src.expr.expr_function(s) # присваиваем k значение функции (число)
+        if '.' in str(k): # проверяем есть ли точки 
+            if int(k) == k: # если число целое, переводим в int на случай, если целое число во float
                 return int(k)
-        return k
+        return k # если нет точек или число дробное
     return 0

@@ -3,7 +3,7 @@ from token import tokenization
 from calculator import expr
 
 
-def final(s):
+def final_function(s):
     if check_function(s): # если выражение введено корректно
         s = tokenization(s) # токенизируем
         k = expr(s)

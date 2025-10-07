@@ -1,15 +1,14 @@
-import src.check
-import src.token
-import src.expr
+from src.check import check
+from src.token import tokenization
+from src.calculator import expr
 
 
-def final_function(s: list) -> [int, float]:
-    """Функция объединяет все предыдущие функции"""
-    if src.check.check_function(s): # если выражение введено корректно
-        s = src.token.token_function(s) # токенизируем
-        k = src.expr.expr_function(s) # присваиваем k значение функции (число)
-        if '.' in str(k): # проверяем есть ли точки 
-            if int(k) == k: # если число целое, переводим в int на случай, если целое число во float
-                return int(k)
-        return k # если нет точек или число дробное
+def final(s):
+    if check(s): # если выражение введено корректно
+        s = tokenization(s) # токенизируем
+        k = expr(s)
+        if '.' in str(k):
+            if int(k) == k:
+                return int(k) # возвращаем int от числа с точкой, если оно целое
+        return k
     return 0

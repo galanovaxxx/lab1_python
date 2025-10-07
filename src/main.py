@@ -1,4 +1,4 @@
-from src.final import final
+from final import final
 
 
 def main() -> None:

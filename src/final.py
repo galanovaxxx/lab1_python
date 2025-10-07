@@ -1,6 +1,6 @@
-from src.check import check
-from src.token import tokenization
-from src.calculator import expr
+from check import check
+from token import tokenization
+from calculator import expr
 
 
 def final(s):

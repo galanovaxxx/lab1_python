@@ -1,10 +1,10 @@
-import src.final
+from src.final import final
 
 
 def main() -> None:
     s = input()
 
-    print(src.final.final_function(s))
+    print(final(s))
 
 
 if __name__ == "__main__":

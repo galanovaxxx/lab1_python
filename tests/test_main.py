@@ -1,4 +1,4 @@
-import src.final
+from src.final import final_function
 import pytest
 
 

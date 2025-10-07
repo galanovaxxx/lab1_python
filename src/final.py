@@ -1,10 +1,10 @@
-from check import check
+from check import check_function
 from token import tokenization
 from calculator import expr
 
 
 def final(s):
-    if check(s): # если выражение введено корректно
+    if check_function(s): # если выражение введено корректно
         s = tokenization(s) # токенизируем
         k = expr(s)
         if '.' in str(k):

@@ -17,7 +17,7 @@ def expr(s: list) -> [int, float]:
     и список не пустой. Потом вызывает функцию add."""
     balance = 0  # проверка скобок
     flag = 1  # флаг для проверки, закрывается ли первая скобка
-    if s[0]=='(' and s:
+    if s[0] == '(' and s:
         for i in range(len(s)):
             if s[i] == '(':
                 balance += 1
